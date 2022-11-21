@@ -2,6 +2,7 @@
 	--num-nav-items: 4;
 	--margin-side: 20vw;
 	font-size: 1.2vw;
+	line-height: 1.5;
 	color: #222222
 }
 
@@ -32,6 +33,10 @@ p,
 ul {
 	margin: 0;
 	padding-bottom: 1em;
+}
+
+ul {
+	padding-left: 2em;
 }
 
 a {
