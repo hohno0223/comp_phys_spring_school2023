@@ -3,23 +3,6 @@
 	--margin-side: 20vw;
 	font-size: 1.2vw;
 	line-height: 1.5;
-	color: #222222
-}
-
-@media screen and (max-width:480px) {
-
-	:root {
-		--margin-side: 10vw;
-		font-size: 3vw;
-	}
-
-	nav#header ul li a {
-		width: 20vw;
-		width: -moz-calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
-		width: -webkit-calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
-		width: calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
-	}
-
 }
 
 h1,
@@ -32,11 +15,11 @@ h4 {
 p,
 ul {
 	margin: 0;
-	padding-bottom: 1em;
+	padding-bottom: 1rem;
 }
 
 ul {
-	padding-left: 2em;
+	padding-left: 2rem;
 }
 
 a {
@@ -64,8 +47,8 @@ footer p {
 }
 
 header {
-	padding-top: 1em;
-	padding-bottom: 4em;
+	padding-top: 1rem;
+	padding-bottom: 4rem;
 	width: 100%;
 	background: url(../images/header.jpg) right bottom/cover;
 }
@@ -82,17 +65,11 @@ nav#header ul {
 
 nav#header ul li a {
 	display: block;
-	width: 15vw;
-	width: -moz-calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
-	width: -webkit-calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
 	width: calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
-	padding-top: 0.33em;
-	padding-top: -moz-calc(1em / 3);
-	padding-top: -webkit-calc(1em / 3);
-	padding-top: calc(1em / 3);
+	padding-top: calc(1rem / 3);
 	text-align: center;
 	font-weight: bold;
-	color: #444444;
+	color: #000000;
 }
 
 nav#header ul li a:hover {
@@ -100,17 +77,17 @@ nav#header ul li a:hover {
 }
 
 main {
-	padding-top: 1em;
+	padding-top: 1rem;
 }
 
 section {
-	padding-top: 1em;
-	padding-bottom: 2em;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
 }
 
 footer {
-	padding-top: 1em;
-	padding-bottom: 3em;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
 	background-color: #444444;
 	color: #ffffff;
 }
@@ -124,7 +101,7 @@ footer a:hover {
 }
 
 img.logo {
-	width: 10vw;
+	width: 8rem;
 }
 
 nav#footer {
@@ -136,6 +113,15 @@ nav#footer {
 }
 
 img.to_top {
-	padding: 0.5em;
-	width: 3vw;
+	padding: 0.5rem;
+	width: 3rem;
+}
+
+@media screen and (max-width:480px) {
+
+	:root {
+		--margin-side: 10vw;
+		font-size: 3vw;
+	}
+
 }
