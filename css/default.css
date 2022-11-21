@@ -124,4 +124,12 @@ img.to_top {
 		font-size: 3vw;
 	}
 
+	img.logo {
+		width: 20rem;
+	}
+
+	img.to_top {
+		width: 7.5rem;
+	}
+
 }
