@@ -5,19 +5,16 @@
 	color: #222222
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	position: relative;
+h1,
+h3,
+h4 {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 p,
 ul {
-	padding-bottom: 1em;
-}
-
-section {
-	padding-top: 1em;
+	margin: 0;
 	padding-bottom: 1em;
 }
 
@@ -31,6 +28,7 @@ a:hover {
 }
 
 body {
+	margin: 0;
 	background-color: #fde3d3;
 }
 
@@ -46,23 +44,22 @@ footer p {
 
 header {
 	padding-top: 1em;
-	height: 10em;
+	padding-bottom: 4em;
 	background: url(../images/header.jpg) right bottom/cover;
 }
 
 nav#header {
-	height: 2em;
 	background-color: #fc9d65;
 }
 
 nav#header ul {
+	padding: 0;
 	list-style: none;
 	display: flex;
 }
 
 nav#header ul li a {
 	display: block;
-	height: 2em;
 	width: 15vw;
 	width: -moz-calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
 	width: -webkit-calc((100vw - 2 * var(--margin-side)) / var(--num-nav-items));
@@ -84,8 +81,14 @@ main {
 	padding-top: 1em;
 }
 
+section {
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
 footer {
 	padding-top: 1em;
+	padding-bottom: 3em;
 	background-color: #444444;
 	color: #ffffff;
 }
@@ -99,13 +102,12 @@ footer a:hover {
 }
 
 img.logo {
-	height: 2.5em;
+	width: 10vw;
 }
 
 nav#footer {
 	position: fixed;
 	bottom: 0;
-	height: 4em;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
@@ -113,5 +115,5 @@ nav#footer {
 
 img.to_top {
 	padding: 0.5em;
-	height: 3em;
+	width: 3vw;
 }

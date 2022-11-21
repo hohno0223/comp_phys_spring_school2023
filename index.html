@@ -6,52 +6,111 @@
     <meta name="keywords" content="計算物理学,春の学校,2023,GPU,機械学習,量子計算,格子QCD,計算物性">
     <meta name="description" content="計算物理学 春の学校 2023">
     <meta name="author" content="Hiroshi Ohno">
+
     <title>
         計算物理学 春の学校 2023
     </title>
+
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <!-- スムーズスクロール部分の記述 -->
+    <script>
+        $(function () {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^=#]').click(function () {
+                // スクロールの速度
+                var speed = 400; // ミリ秒
+                // アンカーの値取得
+                var href = $(this).attr("href");
+                // 移動先を取得
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                // 移動先を数値で取得
+                var position = target.offset().top;
+                // スムーススクロール
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <a href="index.html">
             <h1>計算物理学 春の学校 2023</h1>
         </a>
+        <h4>ー量子計算と機械学習および物理学への応用ー</h4>
         <h4>沖縄県市町村自治会館 2023年3月13日 ー 15日</h4>
     </header>
 
     <nav id="header">
         <ul>
-            <li><a href="index.php">開催趣旨</a></li>
-            <li><a href="index.php">会場/日程</a></li>
-            <li><a href="index.php">プログラム</a></li>
-            <li><a href="index.php">参加登録</a></li>
+            <li><a href="#aim">開催趣旨</a></li>
+            <li><a href="#venue_date">会場/日程</a></li>
+            <li><a href="#program">プログラム</a></li>
+            <li><a href="#registration">参加登録</a></li>
         </ul>
     </nav>
 
     <main>
 
-        <section>
+        <section id="aim">
             <h1>開催趣旨</h1>
             <p>
-                機械学習とか量子計算は最近重要だよね。
+                近年の量子計算や機械学習に関する技術の発展は目覚ましく、
+                様々な場所でその成果を耳にすることが多くなりました。
+                物理学の分野でもこれらを用いた研究が盛んになっており、
+                既存手法では解くことが困難な種々の問題を解決する大きな助けになるのではと期待されています。
+                逆に、 これまでの物理学の知見を生かして、
+                機械学習の仕組みをより深く理解しようという研究なども行われています。
+            </p>
+            <p>
+                一方で、 このような取り組みはまだまだ発展途上であり、 特に、
+                国内においてはまだまだ研究の裾野が広いとは言えない状況です。
+            </p>
+            <p>
+                以上の背景から、 近年注目が集まっている量子計算と機械学習を主なテーマに据え、
+                物理学分野の若手育成および人材交流を目的として、 以下の通りスクールを開催します。
+            </p>
+            <p>
+                スクールの主なターゲットは大学院生や若手ポスドク研究員ですが、
+                上記テーマに興味をお持ちの方でしたらどなたでも歓迎いたします。
             </p>
         </section>
 
-        <section>
+        <section id="venue_date">
             <h1>会場/日程</h1>
             <ul>
                 <li>会場: <a href="http://okinawa-jichikaikan.com/">沖縄県市町村自治会館</a></li>
-                <li>日程: 2023年3月13日 ー 15日</li>
+                <li>開催方式: 対面とオンラインのハイブリッド形式を予定 (ただし、対面がメイン)</li>
+                <li>日程: 2023年3月13日 (月) ー 15日 (水)</li>
             </ul>
         </section>
 
-        <section>
+        <section id="program">
             <h1>プログラム</h1>
+            <p>
+                プログラムは大きく分けて講義と研究会 (ポスターセッション) の2つに分かれます。
+            </p>
+            <h3>[講義]</h3>
+            <p>
+                講義は単独で行う<b>共通講義</b>と、 複数同時で行う<b>個別講義</b>を実施します。
+                講義内容は大学院初年度程度の物理学及び数値計算の基礎的知識のみを前提とし、
+                量子計算や機械学習に関する予備知識は問いません。
+                対面とオンラインどちらでもご参加いただけます。
+                ただし、 オンライン環境は画面共有など最低限のものとし、 対面参加優先で実施します。
+            </p>
+            <p>
+                予定されている講義は以下の通りです。
+            </p>
             <h3>&lt;共通講義&gt;</h3>
             <ul>
-                <li>GPU計算入門: NVIDIA</li>
+                <li>GPU計算入門: NVIDIA講師によるGPU計算の基礎的な内容の講義及びスパコンを使った実習を予定</li>
                 <li>機械学習入門: </li>
                 <li>量子計算入門: </li>
                 <li>Julia入門: </li>
@@ -64,14 +123,21 @@
                 <li>開発の作法入門: </li>
                 <li>MA live!講習: </li>
                 <li>第一原理計算による物性計算入門: </li>
+                <li>その他、物性計算の個別アプリについて: </li>
             </ul>
-            <h3>&lt;ポスターセッション&gt;</h3>
+            <h3>[ポスターセッション]</h3>
+            <p>
+                既に研究テーマをお持ちの方を対象に、 ポスターセッションを設けます。
+                対面でのみご参加いただけます。
+                詳細は決まり次第、こちらでお知らせします。
+            </p>
         </section>
 
-        <section>
+        <section id="registration">
             <h1>参加登録</h1>
             <p>
-                準備中。
+                準備中。大学院生などご自身の財源をお持ちでない方を対象に、
+                旅費の補助を行う予定です。詳細は決まり次第、こちらでお知らせします。
             </p>
         </section>
 
@@ -80,13 +146,13 @@
     <footer>
         <h4>世話人</h4>
         <p>
-            大久保 毅 (東大)、大野 浩史 (筑波大)、柏 浩司 (福岡工業大)、品岡 寛 (埼玉大)、下川 統久朗 (OIST)、
-            田中 章詞 (理研)、富谷 昭夫 (大阪国際工科専門職大)、永井 佑紀 (JAEA)、二村 保徳 (筑波大)、水上 渉 (大阪大)
+            大久保 毅 (東大)、大野 浩史 (筑波大)、柏 浩司 (福岡工業大)、品岡 寛 (埼玉大)、下川 統久朗 (OIST)、田中 章詞
+            (理研)、富谷 昭夫 (大阪国際工科専門職大)、永井 佑紀 (JAEA)、二村 保徳 (筑波大)、水上 渉 (大阪大)
         </p>
 
         <p>
             本スクールは、科学研究費補助金学術変革領域研究(A)
-            「<a href="https://mlphys.scphys.kyoto-u.ac.jp/">学習物理学の創成</a>」の補助を受けております。
+            「<a href="https://mlphys.scphys.kyoto-u.ac.jp/">学習物理学の創成</a>」の補助を受けています。
         </p>
         <p>
             <a href="https://mlphys.scphys.kyoto-u.ac.jp/">
@@ -96,7 +162,7 @@
     </footer>
 
     <nav id="footer">
-        <a href="index.html">
+        <a href="#top">
             <img class="to_top" src="images/to_top.png" alt="to top" title="ページ上部に戻る">
         </a>
     </nav>
