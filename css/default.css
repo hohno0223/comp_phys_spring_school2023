@@ -9,6 +9,7 @@
 
 	:root {
 		--margin-side: 10vw;
+		font-size: 3vw;
 	}
 
 	nav#header ul li a {
