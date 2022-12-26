@@ -2,241 +2,385 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="計算物理,春の学校,2023,GPU,機械学習,量子計算,格子QCD,計算物性">
-    <meta name="description" content="計算物理 春の学校 2023">
-    <meta name="author" content="Hiroshi Ohno">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="計算物理,春の学校,2023,数値計算,GPU,機械学習,量子計算,格子QCD,計算物性">
+  <meta name="description" content="計算物理 春の学校 2023">
+  <meta name="author" content="Hiroshi Ohno">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>
-        計算物理 春の学校 2023
-    </title>
+  <title>
+    計算物理 春の学校 2023
+  </title>
 
-    <link rel="stylesheet" type="text/css" href="css/default.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
 
-    <!-- jQuery.jsの読み込み -->
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <!-- jQuery.jsの読み込み -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
-    <!-- スムーズスクロール部分の記述 -->
-    <script>
-        $(function () {
-            // #で始まるアンカーをクリックした場合に処理
-            $('a[href^=#]').click(function () {
-                // スクロールの速度
-                var speed = 400; // ミリ秒
-                // アンカーの値取得
-                var href = $(this).attr("href");
-                // 移動先を取得
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                // 移動先を数値で取得
-                var position = target.offset().top;
-                // スムーススクロール
-                $('body,html').animate({ scrollTop: position }, speed, 'swing');
-                return false;
-            });
-        });
-    </script>
+  <!-- スムーズスクロール部分の記述 -->
+  <script>
+    $(function () {
+      // #で始まるアンカーをクリックした場合に処理
+      $('a[href^=#]').click(function () {
+        // スクロールの速度
+        var speed = 400; // ミリ秒
+        // アンカーの値取得
+        var href = $(this).attr("href");
+        // 移動先を取得
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        // 移動先を数値で取得
+        var position = target.offset().top;
+        // スムーススクロール
+        $('body,html').animate({ scrollTop: position }, speed, 'swing');
+        return false;
+      });
+    });
+  </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMJPK4RSDX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMJPK4RSDX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'G-WMJPK4RSDX');
-    </script>
+    gtag('config', 'G-WMJPK4RSDX');
+  </script>
 </head>
 
 <body>
-    <header id="top">
-        <a href="index.html">
-            <h1>計算物理 春の学校 2023</h1>
-        </a>
-        <h4>沖縄県市町村自治会館 2023年3月13日 - 15日</h4>
-    </header>
+  <header id="top">
+    <a href="index.html">
+      <h1>計算物理 春の学校 2023</h1>
+    </a>
+    <h4>沖縄県市町村自治会館 2023年3月13日 - 15日</h4>
+  </header>
 
-    <nav id="header">
+  <nav id="header">
+    <ul>
+      <li><a href="#aim">開催趣旨</a></li>
+      <li><a href="#venue_date">会場/日程</a></li>
+      <li><a href="#program">プログラム</a></li>
+      <li><a href="#notice">注意事項</a></li>
+      <li><a href="#registration">参加登録</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="aim">
+      <h1>開催趣旨</h1>
+      <p>
+        計算機を使った研究は、 高エネルギー物理学から物性物理学まで、 幅広い物理学の分野で重要な役割を担っています。
+        モンテカルロ法、 第一原理計算、 テンソルネットワークなど従来から活用されている手法に加え、
+        機械学習や量子計算などの新機軸も注目を浴びています。 また、 プログラミングの観点からは、
+        テスト駆動型開発などのソフトウェア工学の導入、 Juliaなどの最新のプログラミング言語の普及が進んでいます。
+        これら多彩な計算理論やプログラミング開発技術の普及を促進するには、 高エネルギー、
+        物性などの分野の垣根を超えた交流の場が必要と私たちは考えました。
+      </p>
+
+      <p>
+        そこで、 物理学分野の若手育成および人材交流を目的として、 以下の通り、
+        「計算物理 春の学校 2023」を開催します。
+        今回は特に機械学習、 量子計算を主なテーマに据えますが、 プログラミング開発力の育成講座、
+        物性各分野のアプリの講習会など幅広い講義を用意しています。 機械学習、 量子計算だけではなく、
+        計算物理全般に興味を持つ幅広い層の方々の研究に役立つことを期待しています。
+      </p>
+
+      <p>
+        スクールの主なターゲットは大学院生や若手ポスドク研究員ですが、
+        上記テーマに興味をお持ちの方でしたらどなたでも歓迎いたします。
+      </p>
+    </section>
+
+    <section id="venue_date">
+      <h1>会場/日程</h1>
+      <ul>
+        <li>会場: <a href="http://okinawa-jichikaikan.com/">沖縄県市町村自治会館</a></li>
+        <li>開催方式: 対面とオンラインのハイブリッド形式 (ただし、対面がメイン)</li>
+        <li>日程: 2023年3月13日 (月) - 15日 (水)</li>
+      </ul>
+    </section>
+
+    <section id="program">
+      <h1>プログラム</h1>
+      <p>
+        プログラムは大きく分けて講義と研究会 (ポスターセッション) の2つに分かれます。
+      </p>
+      <h3>[講義]</h3>
+      <p>
+        講義は単独で行う<b>共通講義</b>と、 複数同時に行う<b>個別講義</b>を実施します。
+        講義内容は大学院初年度程度の物理学及び数値計算の基礎的知識のみを前提とし、
+        量子計算や機械学習に関する予備知識は問いません。
+        いくつかの個別講義は、 その他の共通講義または個別講義の内容と関連しています。
+        対面とオンラインどちらでもご参加いただけます。
+        ただし、 オンライン環境は画面共有など最低限のものとし、 対面参加優先で実施します。
+      </p>
+      <p>
+        予定されている講義は以下の通りです。
+      </p>
+      <h3>3/13 (月)</h3>
+      <h3>&lt;共通講義&gt;</h3>
+      <ul>
+        <li>量子計算入門</li>
         <ul>
-            <li><a href="#aim">開催趣旨</a></li>
-            <li><a href="#venue_date">会場/日程</a></li>
-            <li><a href="#program">プログラム</a></li>
-            <li><a href="#registration">参加登録</a></li>
+          <li>講師: 水上 渉 (大阪大)</li>
         </ul>
-    </nav>
+        <li>Julia入門</li>
+        <ul>
+          <li>講師: 永井 佑紀 (JAEA)</li>
+        </ul>
+        <li>プログラム開発の技術</li>
+        <ul>
+          <li>講師: 藤堂 眞治 (東大)</li>
+          <li>
+            概要: 計算物理のためのプログラム開発技術、 特に、 動作するきれいなコードを楽に開発するための技術を紹介する。
+            具体的には、 テスト駆動開発、 継続的インテグレーション、 バージョン管理を中心に、 C++とPythonを例にとって解説し、
+            実習を行う。
+          </li>
+        </ul>
+      </ul>
+      <h3>3/14 (火)</h3>
+      <h3>&lt;共通講義&gt;</h3>
+      <ul>
+        <li>GPU コンピューティング入門 & ハンズオン
+        </li>
+        <ul>
+          <li>講師: 丹 愛彦 (NVIDIA)</li>
+          <li>
+            概要: GPU コンピューティングのベースとなる GPU のアーキテクチャを、 そのプログラミング環境である CUDA
+            などを通して概説する。 ハンズオンでは、サンプル コードを用いて Python による GPU コンピューティングを体験する。
+          </li>
+          <li>実習部分は対面でのみ参加可能（オンラインでも資料の閲覧は可能）</li>
+          <li>実習に用いるGPUマシンは世話人側で用意</li>
+        </ul>
+      </ul>
+      <h3>&lt;個別講義&gt;</h3>
+      <ul>
+        <li>MateriApps LIVE! で始める計算物性科学</li>
+        <ul>
+          <li>講師: 本山 裕一 (東大)</li>
+          <li>
+            概要: MateriApps LIVE! は計算物性科学の様々なソフトウェア、 例えば Quantum ESPRESSO (第一原理電子状態計算)
+            や HPhi (量子格子模型の厳密対角化) などがプリインストールされた Debian GNU/Linux 環境である。
+            本演習では MateriApps LIVE! の使い方を学んだ後、 実際に HPhi などのソフトウェアを実行することで計算物性科学を体験する。
+          </li>
+        </ul>
+        <li>格子QCD入門</li>
+        <ul>
+          <li>講師: 大野 浩史 (筑波大)、富谷 昭夫 (大阪国際工科専門職大)</li>
+          <li>
+            概要: 格子QCDの定式化および数値計算手法についての基礎的な内容を紹介する。
+            具体的には、 格子上のゲージ場およびフェルミオン場の作用の構成法や物理量の計算法といった理論的基礎に加え、
+            熱浴法やハイブリッドモンテカルロ法等のモンテカルロ計算手法の基礎を解説する。
+          </li>
+        </ul>
+      </ul>
+      <h3>3/15 (水)</h3>
+      <h3>&lt;共通講義&gt;</h3>
+      <ul>
+        <li>機械学習入門</li>
+        <ul>
+          <li>講師: 瀧 雅人 (立教大)</li>
+        </ul>
+      </ul>
+      <h3>&lt;個別講義&gt;</h3>
+      <ul>
+        <li>量子計算入門 & ハンズオン</li>
+        <ul>
+          <li>講師: 川久保 亮 (QunaSys)、和田 健太朗 (QunaSys)</li>
+        </ul>
+        <li>第一原理計算による物性計算入門</li>
+        <ul>
+          <li>講師: 是常 隆 (東北大)</li>
+          <li>
+            概要: 第一原理計算のコード quantum-ESPRESSO を用いて電子状態を計算する方法について、
+            webサイト「quantum-ESPRESSO tutorial」をベースに解説し、 実習を行う。
+            また、 wannier90を用いたモデル化などについても触れる予定である。
+          </li>
+          <li>「MateriApps LIVE!講習」を受講していることを推奨</li>
+        </ul>
+        <li>機械学習の格子QCDへの応用</li>
+        <ul>
+          <li>講師: 田中 章詞 (理研)</li>
+        </ul>
+        <li>Flow based sampling algorithms</li>
+        <ul>
+          <li>講師: Daniel Hackett (MIT)</li>
+        </ul>
+      </ul>
+      <p>その他、 物性計算の様々なアプリに関する講義を企画中</p>
+      <h3>[ポスターセッション]</h3>
+      <p>
+        既に研究テーマをお持ちの方を対象に、 ポスターセッションを設けます。
+      </p>
+      <ul>
+        <li>3/14 (火) 開催予定。</li>
+        <li>対面でのみご参加いただけます。</li>
+        <li>ポスターセッションをご希望の方は、 <a href="#registration">参加登録</a> よりお申込み下さい。</li>
+        <li>発表希望者数がポスター展示スペースを上回った場合、選抜を行うことがあります。</li>
+        <li>お申込みされた方には後程、 発表題目等をご提出いただきます。</li>
+        <li>ポスター展示面のサイズは W80cm x H110cm です。</li>
+      </ul>
+    </section>
 
-    <main>
-        <section id="aim">
-            <h1>開催趣旨</h1>
-            <p>
-                計算機を使った研究は、 高エネルギー物理学から物性物理学まで、 幅広い物理学の分野で重要な役割を担っています。
-                モンテカルロ法、 第一原理計算、 テンソルネットワークなど従来から活用されている手法に加え、
-                機械学習や量子計算などの新機軸も注目を浴びています。 また、 プログラミングの観点からは、
-                テスト駆動型開発などのソフトウェア工学の導入、 Juliaなどの最新のプログラミング言語の普及が進んでいます。
-                これら多彩な計算理論やプログラミング開発技術の普及を促進するには、 高エネルギー、
-                物性などの分野の垣根を超えた交流の場が必要と私たちは考えました。
-            </p>
+    <section id="notice">
+      <h1>注意事項</h1>
+      <p>
+        本スクールへの参加をご希望の方は、 以下の注意事項をよくお読みいただき、 ご理解いただいた上でご参加ください。
+      </p>
+      <h3 id="support">旅費補助をご希望の皆様へ</h3>
+      <ul>
+        <li>
+          <b>ご自身の財源をお持ちでない方を対象に、 国内の旅費・宿泊費の補助を行います。</b>
+          補助が必要な方は、
+          <a href="#registration">参加登録</a> よりお申込み下さい。その際、 ご本人について参照できる方
+          (指導教員、 メンター等) の連絡先をお聞きいたしますので、 連絡先の方に同意を得た上で、
+          必要な情報をご準備ください。
+        </li>
+        <li>
+          財源に限りがありますので、 ご希望に沿えない場合があります。
+          <b>
+            補助可能かどうかの決定は、 1/20 (金) までにご連絡します。
+            補助決定の連絡があるまで宿泊施設、 航空券およびその他交通機関等の手配はお待ちください。
+          </b>
+        </li>
+        <li>
+          手続きに必要な書類は速やかに提出してください。 提出が遅れると補助できなくなることがあります。
+        </li>
+        <li>
+          宿泊施設、 航空券およびその他交通機関等の手配は各自で行ってください。
+        </li>
+        <li>
+          航空券は最下級のクラスのもので、 可能な限り安価のものを購入してください。
+        </li>
+        <li>
+          航空券の半券や搭乗証明書等 (いずれも原本) は、 出張事実の確認に必要ですので、 大切に保管し、
+          世話人へ提出してください。
+        </li>
+        <li>
+          宿泊費は原則 1泊8,000円 を上限とし、 実費をお支払いします。
+        </li>
+        <li>
+          航空機を利用しない場合は、 宿泊施設の領収書 (チェックアウト日以降の日付のもの)
+          または宿泊証明書を世話人へ提出してください。
+        </li>
+        <li>
+          基本的に前泊または後泊を認めます。 無理のない旅程をお組ください。
+        </li>
+        <li>
+          その他、 スクールの前後に他の用務や私用があるなど、 特別な旅費計算が必要な場合は、
+          宿泊施設、 航空券およびその他交通機関等を手配する前に世話人にご相談ください。
+        </li>
+      </ul>
+      <h3>対面参加予定の皆様へ</h3>
+      <ul>
+        <li>
+          会場の定員により、 対面参加者の上限を 100 名程度とさせていただきます。
+          <b>
+            対面参加希望者が上限を超えた場合、 選抜を行います。
+            その際、 若手の方を優先することがあります。
+            選抜の結果、 オンライン参加への変更をお願いする場合は、 2/3 (金) ごろまでにお知らせします。
+          </b>
+        </li>
+        <li>
+          咳・発熱などの体調不良のある方や新型コロナウイルスの感染が疑われる方は、 参加をお控えください。
+          参加を取りやめる際は、 速やかに世話人までご連絡ください。
+        </li>
+        <li>
+          会場ではマスクの着用をお願いします。 また、 できるだけ他の参加者との身体的距離を保ち、 密集をお避け下さい。
+        </li>
+        <li>
+          会場では WiFi がご利用いただけます。
+        </li>
+        <li>
+          会場の電源は参加人数に対し十分な数がございませんので、 PCをご利用の際は、 十分に充電した状態でお持ちください。
+        </li>
+        <li>
+          会場付近には多くの宿泊先がございますので、宿泊先はご自身でご用意ください。
+        </li>
+      </ul>
+      <h3>オンライン参加予定の皆様へ</h3>
+      <ul>
+        <li>
+          テレビ会議ツールは Zoom を用います。
+        </li>
+        <li>
+          Zoom のミーティング URL およびパスワードは、スクール当日までに、 ご登録いただいたメールアドレスへお送りします。
+          スクール参加者以外への転載・転送はお控えください。
+        </li>
+        <li>
+          参加時の表示名は「登録時の名前@登録した機関名」に設定してください。
+        </li>
+        <li>
+          ノイズを防ぐため、ご質問時等以外はミュートに設定してください。
+        </li>
+      </ul>
+      <h3>その他、注意事項</h3>
+      <ul>
+        <li>
+          講義の録音・録画はお控えください。
+        </li>
+      </ul>
+    </section>
 
-            <p>
-                そこで、 物理学分野の若手育成および人材交流を目的として、 以下の通り、
-                「計算物理 春の学校 2023」を開催します。
-                今回は特に機械学習、 量子計算を主なテーマに据えますが、 プログラミング開発力の育成講座、
-                物性各分野のアプリの講習会など幅広い講義を用意しています。 機械学習、 量子計算だけではなく、
-                計算物理全般に興味を持つ幅広い層の方々の研究に役立つことを期待しています。
-            </p>
+    <section id="registration">
+      <h1>参加登録 (受付中)</h1>
+      <p>
+        本スクールへの参加をご希望の方は、<a href="#notice">注意事項</a> をよくお読みいただいた上で、
+        以下の参加登録フォームよりご登録ください。
+      </p>
+      <h3>参加費</h3>
+      <ul>
+        <li>無料</li>
+      </ul>
+      <h3>参加登録締め切り</h3>
+      <ul>
+        <li><b>対面参加、旅費・宿泊費補助必要: 2023/1/15 (日) 23:59 JST</b></li>
+        <li><b>対面参加、旅費・宿泊費補助不要: 2023/1/29 (日) 23:59 JST</b></li>
+        <li><b>オンライン参加のみ: 2023/3/10 (金) 12:00 JST</b></li>
+      </ul>
+      <p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSerjAz72ByfjGG3gnpcKCGQSXm6KhH2I5CYA_h_X5UBztkkLA/viewform">参加登録フォーム</a>
+      </p>
+    </section>
+  </main>
 
-            <p>
-                スクールの主なターゲットは大学院生や若手ポスドク研究員ですが、
-                上記テーマに興味をお持ちの方でしたらどなたでも歓迎いたします。
-            </p>
-        </section>
+  <footer>
+    <h4>お問い合わせ</h4>
+    <p>
+      本スクールに関するお問い合わせは、
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdDpfTGIVfE1TAO98D2dVqfgsMpq_IuqF2iJdXeletMyVuYtQ/viewform">こちら</a>
+      までお願いします。
+    </p>
+    <h4>世話人</h4>
+    <p>
+      大久保 毅 (東大)、大野 浩史 (筑波大)、柏 浩司 (福岡工業大)、川久保 亮 (QunaSys)、品岡 寛 (埼玉大)、下川 統久朗
+      (OIST)、田中 章詞 (理研)、富谷 昭夫 (大阪国際工科専門職大)、永井 佑紀 (JAEA)、二村 保徳 (筑波大)、水上 渉
+      (大阪大)、和田 健太朗 (QunaSys)
+    </p>
+    <p>
+      本スクールは、科学研究費補助金学術変革領域研究(A)
+      「<a href="https://mlphys.scphys.kyoto-u.ac.jp/">学習物理学の創成</a>」および
+      <a href="https://qunasys.com/">QunaSys</a> からの補助を受けています。
+    </p>
+    <p>
+      <a href="https://mlphys.scphys.kyoto-u.ac.jp/">
+        <img class="logo" src="images/mlphys_logo.png" alt="MLPhys logo">
+      </a>
+      <a href="https://qunasys.com/">
+        <img class="logo" src="images/qunasys_logo.png" alt="QunaSys logo">
+      </a>
+    </p>
+  </footer>
 
-        <section id="venue_date">
-            <h1>会場/日程</h1>
-            <ul>
-                <li>会場: <a href="http://okinawa-jichikaikan.com/">沖縄県市町村自治会館</a></li>
-                <li>開催方式: 対面とオンラインのハイブリッド形式を予定 (ただし、対面がメイン)</li>
-                <li>日程: 2023年3月13日 (月) - 15日 (水)</li>
-            </ul>
-        </section>
-
-        <section id="program">
-            <h1>プログラム</h1>
-            <p>
-                プログラムは大きく分けて講義と研究会 (ポスターセッション) の2つに分かれます。
-            </p>
-            <h3>[講義]</h3>
-            <p>
-                講義は単独で行う<b>共通講義</b>と、 複数同時に行う<b>個別講義</b>を実施します。
-                講義内容は大学院初年度程度の物理学及び数値計算の基礎的知識のみを前提とし、
-                量子計算や機械学習に関する予備知識は問いません。
-                いくつかの個別講義は、 その他の共通講義または個別講義の内容と関連しています。
-                対面とオンラインどちらでもご参加いただけます。
-                ただし、 オンライン環境は画面共有など最低限のものとし、 対面参加優先で実施します。
-            </p>
-            <p>
-                予定されている講義は以下の通りです。
-            </p>
-            <h3>&lt;共通講義&gt;</h3>
-            <ul>
-                <li>量子計算入門</li>
-                <ul>
-                    <li>講師: 水上 渉 (大阪大)</li>
-                </ul>
-                <li>機械学習入門</li>
-                <ul>
-                    <li>講師: 瀧 雅人 (立教大)</li>
-                </ul>
-                <li>GPU計算入門 & ハンズオン</li>
-                <ul>
-                    <li>講師: 未定 (NVIDIA)</li>
-                    <li>実習に用いるGPUマシンは世話人側で用意</li>
-                </ul>
-                <li>Julia入門</li>
-                <ul>
-                    <li>講師: 永井 佑紀 (JAEA)</li>
-                </ul>
-            </ul>
-            <h3>&lt;個別講義&gt;</h3>
-            <ul>
-                <li>量子計算入門 & ハンズオン</li>
-                <ul>
-                    <li>講師: 川久保 亮 (QunaSys)、和田 健太朗 (QunaSys)</li>
-                </ul>
-                <li>格子QCD入門</li>
-                <ul>
-                    <li>講師: 大野 浩史 (筑波大)、富谷 昭夫 (大阪国際工科専門職大)</li>
-                </ul>
-                <li>機械学習の格子QCDへの応用</li>
-                <ul>
-                    <li>講師: 田中 章詞 (理研)</li>
-                </ul>
-                <li>Flow based sampling algorithm</li>
-                <ul>
-                    <li>講師: Daniel Hackett (MIT)</li>
-                </ul>
-                <li>プログラム開発の技術</li>
-                <ul>
-                    <li>講師: 藤堂 眞治 (東大)</li>
-                </ul>
-                <p>
-                計算物理のためのプログラム開発技術、特に、動作するきれいなコードを楽に開発するための技術を紹介する。
-                具体的には、テスト駆動開発、継続的インテグレーション、バージョン管理を中心に、C++とPythonを例にとって解説し、実習を行う。
-                </p>
-                
-                <li>MateriApps LIVE! で始める計算物性科学</li>
-                <ul>
-                    <li>講師: 本山 裕一 (東大)</li>
-                </ul>
-                <p>
-                MateriApps LIVE! は計算物性科学の様々なソフトウェア、例えばQuantum ESPRESSO （第一原理電子状態計算）やHPhi （量子格子模型の厳密対角化）などがプリインストールされた Debian GNU/Linux 環境である。
-                本演習ではMateriApps LIVE! の使い方を学んだ後、実際に HPhi などのソフトウェアを実行することで計算物性科学を体験する。
-                </p>
-                
-                <li>第一原理計算による物性計算入門</li>
-                <ul>
-                    <li>講師: 是常 隆 (東北大)</li>
-                    <li>「MateriApps LIVE!講習」を受講していることを推奨</li>
-                </ul>
-                <p>
-                第一原理計算のコード quantum-ESPRESSO を用いて電子状態を計算する方法について，webサイト「quantum-ESPRESSO tutorial」をベースに解説し，実習を行う。
-                また，wannier90を用いたモデル化などについても触れる予定である。
-                </p>
-
-                <li>その他、 物性計算の様々なアプリに関する講義を企画中</li>
-            </ul>
-            <h3>[ポスターセッション]</h3>
-            <p>
-                既に研究テーマをお持ちの方を対象に、 ポスターセッションを設けます。
-                対面でのみご参加いただけます。
-                詳細は決まり次第、 こちらでお知らせします。
-            </p>
-        </section>
-
-        <section id="registration">
-            <h1>参加登録 (準備中)</h1>
-            <p>
-                大学院生などご自身の財源をお持ちでない方を対象に、
-                旅費の補助を行う予定です。 詳細は決まり次第、 こちらでお知らせします。
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <h4>お問い合わせ</h4>
-        <p>
-            本スクールに関するお問い合わせは、
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdDpfTGIVfE1TAO98D2dVqfgsMpq_IuqF2iJdXeletMyVuYtQ/viewform">こちら</a>
-            までお願いします。
-        </p>
-        <h4>世話人</h4>
-        <p>
-            大久保 毅 (東大)、大野 浩史 (筑波大)、柏 浩司 (福岡工業大)、川久保 亮 (QunaSys)、品岡 寛 (埼玉大)、下川 統久朗
-            (OIST)、田中 章詞 (理研)、富谷 昭夫 (大阪国際工科専門職大)、永井 佑紀 (JAEA)、二村 保徳 (筑波大)、水上 渉
-            (大阪大)、和田 健太朗 (QunaSys)
-        </p>
-        <p>
-            本スクールは、科学研究費補助金学術変革領域研究(A)
-            「<a href="https://mlphys.scphys.kyoto-u.ac.jp/">学習物理学の創成</a>」および
-            <a href="https://qunasys.com/">QunaSys</a> からの補助を受けています。
-        </p>
-        <p>
-            <a href="https://mlphys.scphys.kyoto-u.ac.jp/">
-                <img class="logo" src="images/mlphys_logo.png" alt="MLPhys logo">
-            </a>
-            <a href="https://qunasys.com/">
-                <img class="logo" src="images/qunasys_logo.png" alt="QunaSys logo">
-            </a>
-        </p>
-    </footer>
-
-    <nav id="footer">
-        <a href="#top">
-            <img class="to_top" src="images/to_top.png" alt="to top" title="ページ上部へ戻る">
-        </a>
-    </nav>
+  <nav id="footer">
+    <a href="#top">
+      <img class="to_top" src="images/to_top.png" alt="to top" title="ページ上部へ戻る">
+    </a>
+  </nav>
 </body>
 
 </html>
