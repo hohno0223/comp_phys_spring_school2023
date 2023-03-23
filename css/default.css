@@ -1,5 +1,5 @@
 :root {
-	--num-nav-items: 5;
+	--num-nav-items: 4;
 	--margin-side: 20vw;
 	font-size: 1.2vw;
 	line-height: 1.5;
@@ -83,6 +83,26 @@ main {
 section {
 	padding-top: 1rem;
 	padding-bottom: 2rem;
+}
+
+.intense_images {
+	cursor: url("../images/plus_cursor.png") 25 25, pointer;
+	display: inline-block;
+	margin-top: 1rem;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.intense_images.group_photo {
+	width: 28rem;
+	height: 21rem;
+	background-image: url("../images/CPSchool2023_group_photo_thumb.png");
+}
+
+.intense_images.zoom_photo {
+	width: 32rem;
+	height: 18rem;
+	background-image: url("../images/CPSchool2023_zoom_photo.png");
 }
 
 footer {

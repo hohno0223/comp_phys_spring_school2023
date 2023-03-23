@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 
   <!-- jQuery.jsの読み込み -->
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
   <!-- スムーズスクロール部分の記述 -->
   <script>
@@ -62,8 +62,7 @@
       <li><a href="#aim">開催趣旨</a></li>
       <li><a href="#venue_date">会場/日程</a></li>
       <li><a href="#program">プログラム</a></li>
-      <li><a href="#notice">注意事項</a></li>
-      <li><a href="#registration">参加登録</a></li>
+      <li><a href="#group_photo">集合写真</a></li>
     </ul>
   </nav>
 
@@ -149,6 +148,11 @@
             参考文献:
             <a href="https://www.kspub.co.jp/book/detail/5282823.html">永井佑紀 著、「1週間で学べる! Julia数値計算プログラミング」(KS情報科学専門書)</a>
           </li>
+          <li>講義資料:
+            <a href="materials/Nagai_2023_okinawa.pdf">スライド</a>、
+            <a href="materials/2dtest.jl">ライブコーディングコード</a>、
+            <a href="materials/3body.jl">3体問題コード</a>
+          </li>
         </ul>
         <li>プログラム開発の技術</li>
         <ul>
@@ -157,6 +161,9 @@
             概要: 計算物理のためのプログラム開発技術、 特に、 動作するきれいなコードを楽に開発するための技術を紹介する。
             具体的には、 テスト駆動開発、 継続的インテグレーション、 バージョン管理を中心に、 C++とPythonを例にとって解説し、
             実習を行う。
+          </li>
+          <li>講義資料:
+            <a href="materials/tdd-tutorial.pdf">スライド</a>
           </li>
         </ul>
       </ul>
@@ -173,6 +180,11 @@
           </li>
           <li>実習部分は対面でのみ参加可能（オンラインでも資料の閲覧は可能）</li>
           <li>実習には筑波大学計算科学研究センターの <a href="https://www.ccs.tsukuba.ac.jp/supercomputer/#Cygnus">Cygnus</a> を使用</li>
+          <li>講義資料:
+            <a href="materials/Intro_GPU_computing.pdf">導入</a>、
+            <a href="materials/Lab1.pdf">ハンズオン Lab1</a>、
+            <a href="materials/Lab2.pdf">ハンズオン Lab2</a>
+          </li>
         </ul>
       </ul>
       <h3>&lt;個別講義&gt;</h3>
@@ -189,6 +201,9 @@
             (量子格子模型の厳密対角化) などがプリインストールされた Debian GNU/Linux 環境である。
             本演習では MateriApps LIVE! の使い方を学んだ後、 実際に HPhi などのソフトウェアを実行することで計算物性科学を体験する。
           </li>
+          <li>講義資料:
+            <a href="materials/20230314_MALIVE.pdf">スライド</a>
+          </li>
         </ul>
         <li>格子QCD入門</li>
         <ul>
@@ -204,6 +219,10 @@
             <a href="https://github.com/akio-tomiya/LatticeQCD.jl">LatticeQCD.jl</a>
             を用いて格子 QCD の数値計算を行ってみる。
           </li>
+          <li>講義資料:
+            <a href="materials/LQCD_lecture_School_slidefinal.pdf">スライド</a>、
+            <a href="materials/LQCD_lecture_School_textbookfinal.pdf">ノート</a>
+          </li>
         </ul>
         <li>虚時間グリーン関数に対するスパースモデリング入門</li>
         <ul>
@@ -215,7 +234,8 @@
             スパースな虚時間・周波数グリッドを用いた高速・省メモリ・高精度な数値計算を可能にする。 本講義では、
             基礎理論の紹介と
             <a href="https://github.com/SpM-lab/sparse-ir">sparse-ir</a> (Python)/
-            <a href="https://github.com/SpM-lab/SparseIR.jl">SparseIR.jl</a> (Julia) ライブラリを用いた実習を行う。<br><br>
+            <a href="https://github.com/SpM-lab/SparseIR.jl">SparseIR.jl</a> (Julia) ライブラリを用いた実習を行う。
+          </li>
           <li>想定する受講者:<br>
             虚時間グリーン関数形式を使った数値計算をしてみたい人を対象とし、グリーン関数論の標準的なテキスト
             (物性理論だと、フェッターワレッカ、阿部龍蔵など)の基礎部分をすでに読んでいることを前提にします。レーマン表示、ダイソン方程式、２次摂動などの基本的な知識があればOKです。
@@ -227,6 +247,9 @@
               href="http://www.kookai.pc.uec.ac.jp/kotaibutsuri/practical_guide_vol_1.pdf">久保公式とグリーン関数法の実践的基礎その1」</a>をお勧めします
             (素粒子理論の人には勧めません)。
           </li>
+          <li>講義資料:
+            <a href="materials/lecture1.pdf">スライド1</a>、
+            <a href="materials/lecture2.pdf">スライド2</a>
           </li>
         </ul>
         <li>テンソルネットワーク法入門</li>
@@ -235,6 +258,10 @@
           <li>
             概要: テンソルネットワークを用いた格子模型・量子多体系の計算手法として、 テンソル繰り込み群、
             テンソルネットワーク状態法の基礎を解説し、 pythonを用いた実習を行う。
+          </li>
+          <li>講義資料:
+            <a href="materials/計算物理春の学校2023：テンソルネットワーク法入門.pdf">スライド (講義)</a>、
+            <a href="materials/計算物理春の学校2023：テンソルネットワーク法入門（実習）.pdf">スライド (実習)</a>
           </li>
         </ul>
       </ul>
@@ -257,6 +284,9 @@
               <li>ライブラリ紹介</li>
             </ul>
           </li>
+          <li>講義資料:
+            <a href="materials/MLOkinawa_Taki.pdf">スライド</a>
+          </li>
         </ul>
       </ul>
       <h3>&lt;個別講義&gt;</h3>
@@ -271,6 +301,16 @@
             が開発している量子計算ライブラリ <a href="https://quri-parts.qunasys.com">QURI Parts</a> を使用します。
           </li>
           <li>本講義を受けられる方には共通講義の「量子計算入門」の受講を推奨します。</li>
+          <li>講義資料:
+            ノート1
+            <a href="https://colab.research.google.com/drive/1-GpajHVPLYFFfYeXqKiPANDsGCKzCFe6?usp=share_link">(Google
+              Colab)</a>
+            <a href="materials/quantum-computation.pdf">(PDF)</a>、
+            ノート2
+            <a href="https://colab.research.google.com/drive/19n3Oi_Cy5UawIkFJdsp8iYfXBCrgIbDc?usp=share_link">(Google
+              Colab)</a>
+            <a href="materials/real-machine.pdf">(PDF)</a>
+          </li>
         </ul>
         <li>第一原理計算による物性計算入門</li>
         <ul>
@@ -294,6 +334,9 @@
             本講義では簡単な生成模型の説明から始め、 近年よく使われる幾つかの具体的なモデル: ボルツマン機械、 変分自己符号化器、
             敵対的生成ネットワーク、 自己回帰モデル、 拡散モデルについて説明する予定です。
           </li>
+          <li>講義資料:
+            <a href="materials/atanaka.pdf">スライド</a>
+          </li>
         </ul>
         <li>Introduction to normalizing flows for lattice field theory</li>
         <ul>
@@ -308,13 +351,34 @@
             introduction to these methods and review the state of ongoing efforts to apply them to numerical
             lattice quantum field theory.
           </li>
+          <li>講義資料:
+            <a href="materials/hackett-intro-to-flows-for-lft.pdf">スライド</a>
+          </li>
         </ul>
       </ul>
       <h3>[ポスターセッション]</h3>
       <p>
         既に研究テーマをお持ちの方を対象に、 ポスターセッションを設けます。
       </p>
-      <h3><a href="計算物理春の学校2023ポスターセッション.pdf">ポスターセッション案内</a></h3>
+      <h3><a href="posters/計算物理春の学校2023ポスターセッション.pdf">ポスターセッション案内</a></h3>
+      <p>
+        ポスター:
+        <a href="posters/4Yamazaki_comp_phys_2023_poster.pdf">[4]</a>
+        <a href="posters/5鄭_UTe2におけるトポロジカル結晶超伝導.pdf">[5]</a>
+        <a href="posters/9渡辺亮_計算物理春の学校.pdf">[9]</a>
+        <a href="posters/13narukawa_com_phys_2023.pdf">[13]</a>
+        <a href="posters/16koboritakumi_CompPhysSS2023_poster.pdf">[16]</a>
+        <a href="posters/17RMasuki_CompPhysSS.pdf">[17]</a>
+        <a href="posters/22矢作裕太_久保公式のベクトル化による電気伝導度計算の高速化.pdf">[22]</a>
+        <a href="posters/24西村皐_機械学習で探るFroggatt-Nielsen模型のフレーバー構造.pdf">[24]</a>
+        <a href="posters/25nagato_0314poster.pdf">[25]</a>
+        <a href="posters/26Hanxiang_XU_OkayamaUniv_comp_phys_spring_school_2023_poster.pdf">[26]</a>
+        <a href="posters/31計算物理春の学校_岡内_poster.pdf">[31]</a>
+        <a href="posters/37Yumoto_poster_CompPhysSpringSchool2023.pdf">[37]</a>
+        <a href="posters/49五十嵐亮_ニューラル構造場の導入とその結晶構造オートエンコーダーへの応用.pdf">[49]</a>
+        <a href="posters/53山口達也_春の計算物理学校.pdf">[53]</a>
+        <a href="posters/54櫻井理人_計算物理春の学校2023.pdf">[54]</a>
+      </p>
       <h3>3/14 (火) 17:15 - 19:00</h3>
       <ul>
         <li>対面でのみご参加いただけます。</li>
@@ -332,123 +396,14 @@
       </ul>
     </section>
 
-    <section id="notice">
-      <h1>注意事項</h1>
-      <p>
-        本スクールへの参加をご希望の方は、 以下の注意事項をよくお読みいただき、 ご理解いただいた上でご参加ください。
-      </p>
-      <h3 id="support">旅費補助をご希望の皆様へ (受け付けを終了しました。)</h3>
-      <ul>
-        <li>
-          <b>十分な財源のない方を対象に、 国内の旅費・宿泊費の補助を行います。</b>
-        </li>
-        <li>
-          手続きに必要な書類は速やかに提出してください。 提出が遅れると補助できなくなることがあります。
-        </li>
-        <li>
-          宿泊施設、 航空券およびその他交通機関等の手配は各自で行ってください。
-        </li>
-        <li>
-          航空券は最下級のクラスのもので、 可能な限り安価のものを購入してください。
-        </li>
-        <li>
-          航空券の半券や搭乗証明書等 (いずれも原本) は、 出張事実の確認に必要ですので、 大切に保管し、
-          世話人へ提出してください。
-        </li>
-        <li>
-          宿泊費は原則 1泊8,000円 の定額をお支払いします。
-        </li>
-        <li>
-          航空機を利用しない場合は、 宿泊施設の領収書 (チェックアウト日以降の日付のもの)
-          または宿泊証明書を世話人へ提出してください。
-        </li>
-        <li>
-          基本的に前泊・後泊を認めます。 無理のない旅程をお組みください。
-        </li>
-        <li>
-          その他、 スクールの前後に他の用務や私用があるなど、 特別な旅費計算が必要な場合は、
-          宿泊施設、 航空券およびその他交通機関等を手配する前に世話人にご相談ください。
-        </li>
-      </ul>
-      <h3>対面参加予定の皆様へ (受け付けを終了しました。)</h3>
-      <ul>
-        <li>
-          一部の講義ではPCを用いた実習を行います。 世話人側ではPCの貸出しは行いませんので、各自ご用意ください。
-        </li>
-        <li>
-          会場の電源は参加人数に対し十分な数がございませんので、 PCをご利用の際は、 十分に充電した状態でお持ちください。
-        </li>
-        <li>
-          会場では WiFi がご利用いただけます。
-        </li>
-        <li>
-          会場付近には多くの宿泊先がございますので、宿泊先はご自身でご用意ください。
-        </li>
-        <li>
-          本スクールにおけるマスク着用の方針: <br>
-          2/10 発表の新型コロナウイルス感染症対策本部決定「マスク着用の考え方の見直し等について」にあります通り、
-          3/13 (学校においては4/1) 以降、 マスクの着用は基本的に個人の判断に委ねられることとなります。
-          本スクールにおけるマスクの着用については、 この決定に従うものとします。 参加者の皆様におかれましても、
-          各個人の主体的な判断が尊重されるよう、 ご協力の程、 宜しくお願いいたします。 なお、 ポスターセッション等、
-          お互いに十分な身体的距離をとることが困難な状況におきましては、 感染防止のため、
-          引き続きマスクの着用を推奨いたします。
-        </li>
-        <li>
-          咳・発熱などの体調不良のある方や新型コロナウイルスの感染が疑われる方は、 参加をお控えください。
-          参加を取りやめる際は、 速やかに世話人までご連絡ください。
-        </li>
-        <li>
-          会場ではできるだけ他の参加者との身体的距離を保ち、 密集をお避け下さい。
-        </li>
-      </ul>
-      <h3>オンライン参加予定の皆様へ</h3>
-      <ul>
-        <li>
-          テレビ会議ツールは Zoom を用います。
-        </li>
-        <li>
-          Zoom のミーティング URL およびパスワードは、スクール当日までにご連絡します。
-          スクール参加者以外への転載・転送はお控えください。
-        </li>
-        <li>
-          参加時の表示名は「登録時の名前@登録した機関名」に設定してください。
-        </li>
-        <li>
-          ノイズを防ぐため、ご質問時等以外はミュートに設定してください。
-        </li>
-        <li>
-          講義中は資料を画面共有します。
-        </li>
-        <li>
-          適宜質問していただいて構いませんが、 質問の仕方は各講義で定められた方法に従ってください。
-        </li>
-        <li>
-          会場の様子を映像配信することは基本的にいたしません。
-        </li>
-        <li>
-          講師以外の音声は聞き取りにくいことがあります。
-        </li>
-      </ul>
-      <h3>その他、注意事項</h3>
-      <ul>
-        <li>
-          講義の録音・録画はお控えください。
-        </li>
-      </ul>
-    </section>
-
-    <section id="registration">
-      <h1>参加登録 (受け付けを終了しました。)</h1>
-      <h3>参加費</h3>
-      <ul>
-        <li>無料</li>
-      </ul>
-      <h3>参加登録締め切り</h3>
-      <ul>
-        <li><b>旅費・宿泊費補助が必要な方の受け付けは終了しました。</b></li>
-        <li><b>対面参加の受け付けは終了しました。</b></li>
-        <li><b>オンライン参加の受け付けは終了しました。</b></li>
-      </ul>
+    <section id="group_photo">
+      <h1>春の学校は終了いたしました。</h1>
+      <h1>ご参加いただきありがとうございました。</h1>
+      <div class="intense_images group_photo" data-image="images/CPSchool2023_group_photo.png"
+        data-title="計算物理春の学校2023 集合写真"></div>
+      <div class="intense_images zoom_photo" data-image="images/CPSchool2023_zoom_photo.png"
+        data-title="計算物理春の学校2023 Zoom写真">
+      </div>
     </section>
   </main>
 
@@ -495,6 +450,13 @@
       <img class="to_top" src="images/to_top.png" alt="to top" title="ページ上部へ戻る">
     </a>
   </nav>
+
+  <!-- Intense Images -->
+  <script src="scripts/intense.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var elements = document.querySelectorAll('.intense_images');
+    Intense(elements);
+  </script>
 </body>
 
 </html>
